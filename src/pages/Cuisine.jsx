@@ -40,7 +40,7 @@ const Grid = styled.div`
 `;
 const Card =styled.div`
     img {
-        width: 100%
+        width: 100%;
         border-radius: 2rem
     }
     a {
