@@ -2,10 +2,16 @@ import {FaPizzaSlice, FaHamburger} from "react-icons/fa";
 import {GiNoodles, GiSushis} from "react-icons/gi";
 import styled from "styled-components";
 import {NavLink} from 'react-router-dom';
+import { motion } from "framer-motion";
 
 function Category() {
   return (
-    <List>
+    <List
+        animate={{opacity: 1 }}
+        initial={{opacity: 0 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.5}}
+    >
         <SLink to={'/cuisine/Italian'}>
             <FaPizzaSlice />
             <h4>Italian</h4>
@@ -26,7 +32,7 @@ function Category() {
   )
 }
 
-const List = styled.div`
+const List = styled(motion.div)`
     display: flex;
     justify-content: center;
     margin: 2rem 0rem;
