@@ -61,7 +61,7 @@ const SLink = styled(NavLink)`
         font-size: 1.5rem;
     }
     &.active {
-        background: linear-greadient (to right, #f27121, #e94057);
+        background: linear-gradient(to right, #f27121, #e94057);
 
         svg {
             color: white;
@@ -70,6 +70,19 @@ const SLink = styled(NavLink)`
             color: white;
         }
     }
+
+    @media (max-width: 768px) {
+    width: 5rem;
+    height: 5rem;
+
+    h4 {
+      font-size: 0.7rem;
+    }
+
+    svg {
+      font-size: 1.3rem;
+    }
+}
 `;
 
-export default Category
+export default Category;

@@ -40,6 +40,11 @@ const Nav = styled.div`
     font-size: 2rem;
   }
 
+  @media (max-width: 768px) {
+    padding: 2rem 0rem;
+    justify-content: center;
+  }
+
 `
 
 export default App;

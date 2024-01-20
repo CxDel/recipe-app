@@ -22,7 +22,7 @@ useEffect(() => {
 
   return (
     <DetailWrapper>
-        <div>
+        <div className="recipe-info">
             <h2>{details.title}</h2>
             <img src={details.image} alt="" />
         </div>
@@ -62,13 +62,24 @@ const DetailWrapper = styled.div`
     margin-top: 10rem;
     margin-bottom: 5rem;
     display: flex;
+
+    @media (max-width: 768px) {
+    flex-direction: column;
+    
+    .recipe-info {
+      order: -1;
+    }
+
+  }
     .active{
         background: linear-gradient(35deg, #494949, #313131);
         color: white;
+        border: 2px solid black;
     }
 
     h2{
-        margin-bottom: 2rem;
+        margin-bottom: 2rem 0 ;
+        text-align: center;
     }
     li{
         font-size: 1.2rem;
@@ -78,9 +89,6 @@ const DetailWrapper = styled.div`
         margin-top: 2rem;
         
     }
-    .active{
-
-    }
 `;
 
 const Button = styled.button`
@@ -89,10 +97,25 @@ const Button = styled.button`
     border: 2px solid black;
     margin-right: 2rem;
     font-weight: 600;
+    width: 150px;
+    height: auto;
+
+    @media (max-width: 768px) {
+    margin: auto;
+    background-size: auto ;
+  }
 `
 
 const Info = styled.div`
     margin-left: 10rem;
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (max-width: 768px) {
+    margin-left: 0;
+    
+    
+  }
 `
 
 
