@@ -75,6 +75,7 @@ const DetailWrapper = styled.div`
         background: linear-gradient(35deg, #494949, #313131);
         color: white;
         border: 2px solid black;
+        outline: none; // Add this line to remove the default outline
     }
 
     h2{
